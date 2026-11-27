@@ -1,4 +1,3 @@
-
 const PIPELINE_STAGES = [
   "Screening",
   "Technical Round 1",
@@ -19,9 +18,7 @@ const updatePipelineStage = (applicantId, stage) => {
     throw new Error("Invalid pipeline stage.");
   }
 
-  const applicant = applicants.find(
-    (item) => item.id === applicantId
-  );
+  const applicant = applicants.find((item) => item.id === applicantId);
 
   if (!applicant) {
     throw new Error("Applicant not found.");
